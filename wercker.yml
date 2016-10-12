@@ -1,4 +1,4 @@
-box: christianromney/clojure@0.5.0
+box: christianromney/clojure
 
 build:
     steps:
