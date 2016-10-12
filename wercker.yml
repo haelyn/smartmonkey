@@ -1,4 +1,4 @@
-box: christianromney/clojure
+box: markmandel/cljx-box@0.0.2
 
 build:
     steps:
