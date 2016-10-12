@@ -1,9 +1,19 @@
-box: ruby
+box: christianromney/clojure@0.5.0
 
 build:
     steps:
-        - bundle-install
-#        - script:
-#            name: rspec
-#            code: bundle exec rspec
+        - script:
+            name: build uberjar
+            code: |
+                lein uberjar;
+        
+        - script:
+            name: build container
+            code: |
+                ./go dockerize
+
+        - script:
+            name: push container
+            code: |
+                ./go dockerpush
 
